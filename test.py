@@ -6,16 +6,10 @@ Created on Tue Feb 19 21:36:12 2019
 @author: aleksandr
 """
 
-eng2sp = dict()
-#print eng2sp
+import dbm
 
-eng2sp['one'] = 'uno'
-#print eng2sp
+db = dbm.open('captons.db', 'c')
 
-eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
-print(eng2sp)
+db['cleese.png'] = 'photo of John Cleese'
 
-#print('one' in eng2sp)
-
-vals = eng2sp.values()
-print('uno' in vals)
+print(db['cleese.png'])
